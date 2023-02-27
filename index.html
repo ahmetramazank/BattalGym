@@ -14,7 +14,7 @@
 <!--Header section-->
 
 <header class="header">
-    <a href="#" class="logo">Battal <span>Gym</span></a>
+    <a href="#" class="logo">Battal<span>Gym</span></a>
     <nav class="navbar">
         <a href="">Programlar</a>
         <a href="">Rehber</a>
@@ -26,38 +26,385 @@
         <div id="menu-btn" class="fas fa-bars"></div>
     </div>
 </header>
+
+
 <section class="home">
 
     <div class="swiper home-slider">
 
         <div class="swiper-wrapper">
 
-            <div class="swiper-slide box" style="background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(/assets/images/home-1.jpeg);">
+            <div class="swiper-slide box" style="background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(assets/images/home-1.jpg);">
                 <div class="content">
-                    <h3>Health is wealth</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est unde quas voluptatibus repellendus inventore.</p>
+                    <h3>Sağlık, Güç, Vİzyon..</h3>
+                    <p>Battal GYM'le değişmeye hemen başla!</p>
                     <div class="button">
-                        <a href="" class="btn btn-1">Get started</a>
-                        <a href="" class="btn">Download</a>
+                        <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-1">Giriş Yap</button>
+                        <button onclick="document.getElementById('id02').style.display='block'" class="btn">Kayıt Ol</button>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide box" style="background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(/assets/images/home-2.jpeg);">
+            <div class="swiper-slide box" style="background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(assets/images/home-2.jpg);">
                 <div class="content">
-                    <h3>Health is wealth</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est unde quas voluptatibus repellendus inventore.</p>
+                    <h3>Sağlık, Güç, Vİzyon..</h3>
+                    <p>Battal GYM'le değişmeye hemen başla!</p>
                     <div class="button">
-                        <a href="" class="btn btn-1">Get started</a>
-                        <a href="" class="btn">Download</a>
+                        <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-1">Giriş Yap</button>
+                        <button onclick="document.getElementById('id02').style.display='block'" class="btn">Kayıt Ol</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!--Login section-->
+
+<!-- Button to open the modal login form -->
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'"
+  class="close" title="Close Modal">&times;</span>
+  
+    <!-- Modal Content -->
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="imgcontainer">
+        <img src="assets/images/img_avatar2.png" alt="Avatar" class="avatar1">
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>E-mail</b></label>
+        <input type="text" placeholder="E-mail Giriniz" name="uname" required>
+  
+        <label for="psw"><b>Şifre</b></label>
+        <input type="password" placeholder="Şifre Giriniz" name="psw" required>
+  
+        <button class="loginbtn" type="submit">Giriş Yap</button>
+        <label class="remember1">
+          <input type="checkbox" checked="checked" name="remember"> Beni Hatırla
+        </label>
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" >İptal</button>
+        <span class="psw">Şifreni mi <a href="#">Unuttun?</a></span>
+      </div>
+    </form>
+  </div>
+
+<!-- Button to open the modal -->
+
+<!-- The Modal (contains the Sign Up form) -->
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+        <img src="assets/images/anon.png" alt="Avatar" class="avatar2">
+      </div>
+    <div class="container">
+      <h1>Kayıt Ol</h1>
+      <p>Bir hesap oluşturmak için lütfen bu formu doldurun.</p>
+      <hr>
+      <label for="email"><b>E-mail</b></label>
+      <input type="text" placeholder="E-mail Giriniz" name="email" required>
+
+      <label for="psw"><b>Şifre</b></label>
+      <input type="password" placeholder="Şifre Giriniz" name="psw" required>
+
+      <label for="psw-repeat"><b>Tekrar Şifre</b></label>
+      <input type="password" placeholder="Tekrar Şifre" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Beni Hatırla
+      </label>
+
+      <p>Bir hesap oluşturarak şunları kabul etmiş olursunuz: <a href="#" style="color:dodgerblue">
+        Şartlar ve Gizlilik</a>.</p>
+
+      <div class="clearfix">
+        <button type="submit" class="loginbtn">Kayıt Ol</button>
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">İptal</button>        
+      </div>
+    </div>
+  </form>
+</div>
+
+<section class="feature">
+    <h1 class="heading">Ücretsiz <span>Programlar</span></h1>
+    <div class="swiper feature-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/fitness.jfif" alt="">
+                </div>
+                <div class="content">
+                    <h3>Fitness</h3>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/bodybuilding.jfif" alt="">
+                </div>    
+                <div class="content">
+                    <h3>Vücut Geliştirme</h3>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/powerlifting.jfif" alt="">
+                </div>    
+                <div class="content">
+                    <h3>Powerlifting</h3>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/crossfit.jfif" alt="">
+                </div>    
+                <div class="content">
+                    <h3>Crossfit</h3>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/calisthenics.jfif" alt="">
+                </div>    
+                <div class="content">
+                    <h3>Calisthenics</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="schedule">
+    <h1 class="heading"><span>Hemen</span> Başla</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+
+            <div class="content">
+                <h3>Kilo Almak İstiyorsan</h3>
+                <p>Kilo almakta zorlanan kişiler için antrenman ve beslenme rehberi.</p>
+            </div>
+            <a href="" class="btn">İncele</a>
+        </div>
+
+        <div class="box">
+            <img src="assets/images/kiloalma.jpg" alt="">
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <h3>Kilo Vermek İstiyorsan</h3>
+                <p>Kilo vermekten zorlanan kişiler için antrenman ve beslenme rehberi.</p>
+            </div>
+            
+            <a href="" class="btn">İncele</a>
+        </div>
+
+        <div class="box">
+            <img src="assets/images/kiloverme.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="assets/images/pic-3.jpeg" alt="">
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <h3>Güçlenmek İstiyorsan</h3>
+                <p>Güçlenmek İstiyorsan antrenman ve beslenme programlarımızı inceleyebilirsin.</p>
+            </div>
+            <a href="" class="btn">İncele</a>
+        </div>
+
+        <div class="box">
+            <img src="assets/images/pic-4.jpeg" alt="">
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <h3>sıkılaşmak istiyorsan</h3>
+                <p>Güçlenmek İstiyorsan antrenman ve beslenme programlarımızı inceleyebilirsin.</p>
+            </div>
+            <a href="" class="btn">İncele</a>
+        </div>
+    </div>
+</section>
+
+<!--<section class="trainers">
+    <h1 class="heading">Expert <span>trainers</span></h1>
+    <div class="swiper trainer-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/trainer-1.jpeg" alt="">
+                </div>
+                <div class="name">
+                    <h1>Jhon Smith</h1>
+                    <p>Gym Trainer</p>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/trainer-4.jpeg" alt="">
+                </div>
+                <div class="name">
+                    <h1>Ayşegül Yaman</h1>
+                    <p>Gym Trainer</p>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/trainer-2.jpeg" alt="">
+                </div>
+                <div class="name">
+                    <h1>Battal Gazi</h1>
+                    <p>Gym Trainer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
+
+<section class="blogs">
+    <h1 class="heading">Temel <span>İçerİkler</span></h1>
+    
+    <div class="swiper blogs-slider">
+        
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/blog-1.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Progessive Overload Nedir?</h3>
+                    <p>Vücut geliştirmek isteyen ve sporda ilerleme göstermek isteyen herkesin uygulaması gereken en temel fitness felsefesi.</p>
+                </div>
+                <div class="button">
+                    <a href="https://www.google.com.tr/" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/blog-2.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Kilo almanın temel prensipleri</h3>
+                    <p>Kilo almak disiplin, sabır ve bilgi isteyen bir iştir. Bu yazı genel prensipleriyle kilo alırken uygulanması gereken şeyleri size açıklıyor. öğren ve bir an önce ideal fiziğine sahip ol!</p>
+                </div>
+                <div class="button">
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/blog-3.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Kilo Vermenin temel prensipleri</h3>
+                    <p>Kilo vermek disiplin, sabır ve bilgi isteyen bir iştir. Bu yazı genel prensipleriyle kilo verirken uygulanması gereken şeyleri size açıklıyor. öğren ve bir an önce ideal fiziğine sahip ol!</p>
+                </div>
+                <div class="button">
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="swiper-slide box">
+                <div class="image">
+                    <img src="assets/images/blog-4.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Fitness Class Name Here</h3>
+                    <span><i class="fa-regular fa-calendar-days"></i>april 22, 2023</span>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, ratione voluptatem! Vel, assumenda facilis dignissimos accusamus voluptate reprehenderit voluptatibus magni dolore perferendis veniam aperiam harum. Rerum dolores maxime pariatur quisquam.</p>
+                </div>
+                <div class="button">
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial">
+    <h1 class="heading"></h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="assets/images/t-2.jpeg" alt="">
+            </div>
+            <div class="name">
+                <h1>Mike Rechardson</h1>
+                <p>CEO. <span>xyz company</span></p>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque delectus aspernatur consectetur sunt quasi ratione, aut debitis culpa sequi, tempora labore dolor ducimus corrupti odit. Quisquam obcaecati nulla non eligendi?</p>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="assets/images/t-3.jpeg" alt="">
+            </div>
+            <div class="name">
+                <h1>Mike Rechardson</h1>
+                <p>CEO. <span>xyz company</span></p>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque delectus aspernatur consectetur sunt quasi ratione, aut debitis culpa sequi, tempora labore dolor ducimus corrupti odit. Quisquam obcaecati nulla non eligendi?</p>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="assets/images/t-4.jpeg" alt="">
+            </div>
+            <div class="name">
+                <h1>Mike Rechardson</h1>
+                <p>CEO. <span>xyz company</span></p>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque delectus aspernatur consectetur sunt quasi ratione, aut debitis culpa sequi, tempora labore dolor ducimus corrupti odit. Quisquam obcaecati nulla non eligendi?</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h1>about</h1>
+            <div class="text">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore sequi excepturi omnis blanditiis incidunt, nulla exercitationem officiis voluptates asperiores vel corrupti error, autem in temporibus dicta quam inventore odit. Voluptatum.</p>
+            </div>
+            <div class="icon">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="box">
+            <h1>contact info</h1>
+            <div class="icons">
+                <a href=""><i class="fas fa-map-marker-alt"></i>34 street Name, city name here, united states</a>
+                <a href=""><i class="fas fa-phone-alt"></i>+1 242 4942 290</a>
+                <a href=""><i class="fas fa-envelope"></i>example@gmail.com</a>
+            </div>
+        </div>
+        <div class="box">
+            <h1>quick links</h1>
+            <div class="icons">
+                <a href="">home</a>
+                <a href="">about</a>
+                <a href="">services</a>
+                <a href="">news</a>
+                <a href="">contact</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!--js-->
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="./assets/js/script.js"></script>
 
 

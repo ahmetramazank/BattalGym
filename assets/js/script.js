@@ -15,9 +15,14 @@ window.onscroll = () =>{
      }else{
         document.querySelector('.header').classList.remove('active');}
 }
+window.onload = () =>{
+    if(window.scrollY > 0){
+        document.querySelector('.header').classList.add('active');
+        }else{
+        document.querySelector('.header').classList.remove('active');}
+}
 
-
-var swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".home-slider", {
     spaceBetween: 20,
     effect: "fade",
     grabCursor: false,
@@ -28,3 +33,39 @@ var swiper = new Swiper(".swiper", {
         disableOnInteraction: false,
     },
 });
+
+
+var swiper = new Swiper(".feature-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+    },
+  });
+
+var swiper = new Swiper(".trainer-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+var swiper = new Swiper(".blogs-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+    },
+  });
