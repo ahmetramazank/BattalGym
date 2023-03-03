@@ -31,10 +31,8 @@ sidebarToggle.addEventListener("click", () => {
     }
 })
 
-let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector("#navbar");
 
-
-menu.onclick = () => {
-    navbar.classList.toggle('active');
+sidebarToggle.onclick = () => {
+    sidebar.classList.toggle('active');
 }
+
