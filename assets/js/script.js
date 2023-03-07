@@ -46,6 +46,18 @@ var swiper = new Swiper(".feature-slider", {
         delay: 4500,
         disableOnInteraction: false,
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },}
   });
 
 var swiper = new Swiper(".trainer-slider", {
@@ -57,7 +69,9 @@ var swiper = new Swiper(".trainer-slider", {
     },
   });
 
-var swiper = new Swiper(".blogs-slider", {
+
+  
+  var swiper = new Swiper(".blogs-slider", {
     slidesPerView: 3,
     spaceBetween: 30,
     pagination: {
@@ -68,4 +82,16 @@ var swiper = new Swiper(".blogs-slider", {
         delay: 4500,
         disableOnInteraction: false,
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },}
   });

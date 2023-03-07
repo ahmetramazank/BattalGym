@@ -140,7 +140,6 @@ section{
     background: rgba(0, 0, 0, .9);
 }
 
-/*--------------- Login Section ---------------*/ 
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -151,52 +150,41 @@ input[type=text], input[type=password] {
   }
   
   
-  /* Extra styles for the cancel button */
-  
-  .loginbtn {
-    display: inline-block;
-    margin: 10px 10px 0 0;
-    padding: .8rem 3rem;
-    background: var(--main-color);
-    font-weight: 400;
-    cursor: pointer;
-    color: #fff;
-    font-size: 1.7rem;
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
   }
   
-  /* Center the image and position the close button */
   .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+    margin: 24px 24px;
+    position: relative;
+  }
+  .imgcontainer img{
+    height: 20%;
+    width: 20%;
+    object-fit: cover;
   }
   
-  img.avatar1 {
-    width: 20%;
-    border-radius: 25%;
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
   }
-  img.avatar2 {
-    width: 15%;
-    border-radius: 25%;
-  }
-
-
+  
   .container {
     padding: 16px;
-    border-radius: .5rem;
   }
-  .cancelbtn{
-    background: none;
-    margin-left: 10px;
-  }
-
+  
   span.psw {
     float: right;
+    padding-top: 16px;
   }
   
   .modal {
     display: none;
     position: fixed;
-    z-index: 1111111111111111111111;
+    z-index: 2222222222222;
     left: 0;
     top: 0;
     width: 100%;
@@ -204,33 +192,20 @@ input[type=text], input[type=password] {
     overflow: hidden;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+    padding-top: 3rem;
   }
-  .modal .container p{
-    padding: 10px 0 10px ;
-  }
-
-  #id01{
-    padding-top: 40px;
-  }
-  #id02{
-    padding-top: 20px;
-  }
-  /* Modal Content/Box */
+  
   .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    margin: 5% auto 15% auto;
     border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
-    border-radius: .5rem;
+    width: 80%;
   }
-
-  
-  /* The Close Button (x) */
   .close {
     position: absolute;
-    right: 120px;
-    top: 20;
-    color: #fff;
+    right: 25px;
+    top: 0;
+    color: #000;
     font-size: 35px;
     font-weight: bold;
   }
@@ -240,8 +215,7 @@ input[type=text], input[type=password] {
     color: red;
     cursor: pointer;
   }
-  
-  /* Add Zoom Animation */
+
   .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
@@ -257,7 +231,6 @@ input[type=text], input[type=password] {
     to {transform: scale(1)}
   }
   
-  /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
     span.psw {
        display: block;
@@ -267,8 +240,6 @@ input[type=text], input[type=password] {
        width: 100%;
     }
   }
-/*--------------- SignUp Section ---------------*/ 
-
   
 /*--------------- Home Section ---------------*/ 
 
@@ -689,11 +660,17 @@ input[type=text], input[type=password] {
     section{
         padding: 2rem;
     }
+    .modal{
+        padding-top: 16rem;
+    }
 }
 
 @media (max-width:768px) {
     #menu-btn{
         display: inline-block;
+    }
+    h3{
+        font-size: 1rem;
     }
     .header .navbar{
         position: absolute;
@@ -715,6 +692,10 @@ input[type=text], input[type=password] {
     .feature .feature-slider .box .content h3{
         padding: 1rem;
     }
+    .blogs .content p{
+        display: none;
+    }
+
     .header .icons{
         display: flex;
         justify-content: space-between;
@@ -736,6 +717,10 @@ input[type=text], input[type=password] {
         letter-spacing: none;
         font-size: 1.3rem;
         padding: 1rem;
+    }
+    .blogs .content h3{
+        font-size: 1rem;
+        font-weight: bold;
     }
 }
 
