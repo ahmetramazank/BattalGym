@@ -32,6 +32,7 @@ var swiper = new Swiper(".home-slider", {
         delay: 9500,
         disableOnInteraction: false,
     },
+    
 });
 
 
@@ -46,6 +47,10 @@ var swiper = new Swiper(".feature-slider", {
         delay: 4500,
         disableOnInteraction: false,
     },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -58,6 +63,7 @@ var swiper = new Swiper(".feature-slider", {
         slidesPerView: 3,
         spaceBetween: 50,
       },}
+      
   });
 
 var swiper = new Swiper(".trainer-slider", {
@@ -66,6 +72,10 @@ var swiper = new Swiper(".trainer-slider", {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 
@@ -81,6 +91,10 @@ var swiper = new Swiper(".trainer-slider", {
     autoplay: {
         delay: 4500,
         disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     breakpoints: {
       0: {

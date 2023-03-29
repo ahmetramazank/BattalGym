@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>User Panel</title>
+</head>
+<body>
+<header class="header">
+    <a href="#" class="logo">Battal<span>Gym</span></a>
+    <nav class="navbar">
+        <a href="">Programlar</a>
+        <a href="">Rehber</a>
+        <a href="">Blog</a>
+        <a href="">İletişim</a>
+    </nav>
+    <div class="icons">
+        <a href="" class="btn">Koçluk İçin Tıkla</a>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </div>
+</header>
+<section style="background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(assets/images/user-panel.jpg);">
+  <div class="user-about">
+    <h2>Kullanıcı Paneli</h2>
+      <form>
+        <div class="about">
+          <div class="form-group">
+            <label for="name">İsim:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="surname">Soyisim:</label>
+            <input type="text" id="surname" name="surname" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone-number">Telefon:</label>
+          <input type="number" id="phone-number" name="phone-number" min="0"  max="100"required>
+        </div>
+        <button type="submit">Kaydet</button>
+      </form>
+  </div>
+  <div class="user-panel">
+      <h2>Kullanıcı Paneli</h2>
+      <form>
+        <div class="about">
+          <div class="form-group">
+            <label for="boy">Boy (cm):</label>
+            <input type="number" id="boy" name="boy"  min="0" max="300" required>
+          </div>
+          <div class="form-group">
+            <label for="kilo">Kilo (kg):</label>
+            <input type="number" id="kilo" name="kilo"  min="0" max="300" required>
+          </div>
+        </div>
+        <div class="about">
+          <div class="form-group">
+            <label for="yas">Yaş:</label>
+            <input type="number" id="yas" name="yas"  min="0" max="100"required>
+          </div>
+          <div class="form-group">
+            <label for="yag-orani">Yağ Oranı (%):</label>
+            <input type="number" id="yag-orani" name="yag-orani" min="0"  max="100"required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="aktiflik-duzeyi">Aktiflik Düzeyi:</label>
+          <select id="aktiflik-duzeyi" name="aktiflik-duzeyi" required>
+            <option value="az">Az Aktif (Ofis Çalışanı)</option>
+            <option value="orta">Orta Aktif (Günlük Hafif Egzersiz Yapan)</option>
+            <option value="cok">Çok Aktif (Günlük Ağır Egzersiz Yapan)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="program">Program:</label>
+          <select id="program" name="program" required>
+            <option value="kilo-alma">Kilo Alma</option>
+            <option value="kilolu-kalma">Kilolu Kalma</option>
+            <option value="kilo-verme">Kilo Verme</option>
+            <option value="form-koruma">Form Koruma</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Tarih:</label>
+          <input type="date" id="date" name="date"required>
+        </div>
+        <button type="submit">Kaydet</button>
+      </form>
+    </div>
+</section>
+<script src="assets/js/user.js"></script>
+</body>
+</html>
+ 

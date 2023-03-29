@@ -1,38 +1,23 @@
-const body = document.querySelector("body"),
-      modeToggle = body.querySelector(".mode-toggle");
-      sidebar = body.querySelector("nav");
-      sidebarToggle = body.querySelector(".sidebar-toggle");
+let menu = document.querySelector('#menu-btn');
+let navbar = document.querySelector(".navbar");
 
-let getMode = localStorage.getItem("mode");
-if(getMode && getMode ==="dark"){
-    body.classList.toggle("dark");
+menu.onclick = () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
 }
 
-let getStatus = localStorage.getItem("status");
-if(getStatus && getStatus ==="close"){
-    sidebar.classList.toggle("close");
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+
+    if(window.scrollY > 0){
+        document.querySelector('.header').classList.add('active');
+     }else{
+        document.querySelector('.header').classList.remove('active');}
 }
-
-modeToggle.addEventListener("click", () =>{
-    body.classList.toggle("dark");
-    if(body.classList.contains("dark")){
-        localStorage.setItem("mode", "dark");
-    }else{
-        localStorage.setItem("mode", "light");
-    }
-});
-
-sidebarToggle.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-    if(sidebar.classList.contains("close")){
-        localStorage.setItem("status", "close");
-    }else{
-        localStorage.setItem("status", "open");
-    }
-})
-
-
-sidebarToggle.onclick = () => {
-    sidebar.classList.toggle('active');
+window.onload = () =>{
+    if(window.scrollY > 0){
+        document.querySelector('.header').classList.add('active');
+        }else{
+        document.querySelector('.header').classList.remove('active');}
 }
-

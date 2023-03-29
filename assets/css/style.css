@@ -15,7 +15,6 @@
     text-decoration: none;
     border: none;
     outline: none;
-    text-transform: capitalize;
     transition: all .2s linear;
 }
 ::selection{
@@ -28,6 +27,7 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 7rem;
 }
+
 ::-webkit-scrollbar{
     width: 1rem;
 }
@@ -42,11 +42,15 @@ html{
     background: #0b3cc1;
 }
 section{
-    padding: 2rem 9%;
+    padding: 2rem 9%;   
+}
+
+.header , .home , .feature , .schedule{
+    text-transform: capitalize;
 }
 
 .heading{
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     padding-top: 4rem;
     padding-bottom: 2rem;
@@ -67,20 +71,22 @@ section{
     font-weight: 500;
     cursor: pointer;
     color: var(--main-color);
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     border-radius: .5rem;
 }
 .btn:hover{
     background: var(--main-color);
     color: #fff;
 }
-
+.btn-slider{
+    display: none;
+}
 .header{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 3rem 9%;
+    padding: 1.7rem 9%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -136,110 +142,11 @@ section{
     display: none;
 }
 .active{
-    padding: 2rem 9%;
+    padding: 1.4rem 9%;
     background: rgba(0, 0, 0, .9);
 }
 
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
-  
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 24px;
-    position: relative;
-  }
-  .imgcontainer img{
-    height: 20%;
-    width: 20%;
-    object-fit: cover;
-  }
-  
-  img.avatar {
-    width: 40%;
-    border-radius: 50%;
-  }
-  
-  .container {
-    padding: 16px;
-  }
-  
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
-  
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 2222222222222;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 3rem;
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  .close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: red;
-    cursor: pointer;
-  }
 
-  .animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-  }
-  
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-  }
-    
-  @keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-  }
-  
-  @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-  }
   
 /*--------------- Home Section ---------------*/ 
 
@@ -260,7 +167,7 @@ input[type=text], input[type=password] {
     max-width: 70rem;
 }
 .home .home-slider .box .content h3{
-    font-size: 5rem;
+    font-size: 4rem;
     color:#fff;
     text-transform: uppercase;
     transition-delay: .2s;
@@ -271,15 +178,20 @@ input[type=text], input[type=password] {
     padding: 1rem 0;
     transition-delay: .4s;
 }
-.home .home-slider .box .button .btn-1{
-    background: var(--main-color);
+.home .home-slider .box .button .btn-1 a{
     color: #fff;
+}
+.home .home-slider .box .button .btn-1 {
+    background: var(--main-color);
     margin-right: .5rem;
 }
 .home .home-slider .box .button .btn-1:hover{
-    background: #fff;
+    background-color: #fff;
+}
+.home .home-slider .box .button .btn-1:hover a{
     color: var(--main-color);
 }
+
 .home .home-slider .box .button{
     transition-delay: .6s;
 }
@@ -306,7 +218,7 @@ input[type=text], input[type=password] {
     border-radius: .5rem;
 }
 .feature .feature-slider .box .image{
-    height: 40rem;
+    height: 30rem;
     width: 100%;
     overflow: hidden;
 }
@@ -327,13 +239,15 @@ input[type=text], input[type=password] {
     align-items: center;
 }
 .feature .feature-slider .box .content h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
-    background: rgba(0, 0, 0, .3);
-    padding: .2rem;
+    background: rgba(0, 0, 0, .7);
+    padding: 1rem;
     margin-top: .5rem;
+    border-radius: 4px;
+    cursor: pointer;
 }
 .feature .feature-slider .box .content .price{
     width: 10rem;
@@ -373,13 +287,13 @@ input[type=text], input[type=password] {
     padding: 2rem;
 }
 .schedule .box-container .box .content h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     padding-bottom: .5rem;
 }
 .schedule .box-container .box .content p{
     color: #333;
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.8;
 }
 .schedule .box-container .box .icons{
@@ -395,12 +309,15 @@ input[type=text], input[type=password] {
     margin-right: .5rem;
 }
 .schedule .box-container .box .btn{
-    margin: 1.5rem 2rem;
+    margin: 1rem 1.5rem;
     background: var(--main-color);
     color: #fff;
+    border: 2px solid #fff;
 }
 .schedule .box-container .box .btn:hover{
-    background-color: #f66a97;
+    background-color: #fff;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
 }
 .schedule .box-container .box img{
     width: 100%;
@@ -409,7 +326,7 @@ input[type=text], input[type=password] {
 }
 
 /*--------------- Trainer Section ---------------*/ 
-
+/* 
 .trainers .trainer-slider{
     padding-bottom: 4rem;
 }
@@ -440,9 +357,79 @@ input[type=text], input[type=password] {
 .trainers .trainer-slider .box .name p{
     font-size: 2rem;
     color: #808080;
+} */
+
+/*--------------- Blog Section ---------------*/ 
+
+.blogs .blogs-slider{
+    padding-bottom: 4rem;
 }
 
-.testimonial .box-container{
+.blogs .blogs-slider .box{
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 0;
+    background: #fafafa;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .3);
+}
+
+.blogs .blogs-slider .box .image{
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+}
+.blogs .blogs-slider .box .image img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+}
+
+.blogs .blogs-slider .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.blogs .blogs-slider .box .content{
+    padding: 2rem;
+    padding-bottom: 1rem;
+}
+.blogs .blogs-slider .box .content h3{
+    font-size: 2rem;
+    color: var(--black);
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.blogs .blogs-slider .box .content span{
+    font-size: 1.3rem;
+    color: #808080;
+}
+.blogs .blogs-slider .box .content span i{
+    margin-right: .5rem;
+    color: var(--main-color);
+}
+.blogs .blogs-slider .box .content p{
+    padding-top: 1rem;
+    color: #808080;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.blogs .blogs-slider .box .button{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.blogs .blogs-slider .box .button .btn{
+    background: var(--main-color);
+    color: #fff;
+    border: 2px solid #fff;
+}
+.blogs .blogs-slider .box .button .btn:hover{
+    background: #fff;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+/*--------------- Testimonial Section ---------------*/ 
+/* .testimonial .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(30rem , 1fr));
     gap: 1.5rem;
@@ -482,87 +469,22 @@ input[type=text], input[type=password] {
     padding: 1rem 0;
 }
 .testimonial .box-container .box .name h1{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--black);
 }
 .testimonial .box-container .box .name p{
     color: #222;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .testimonial .box-container .box .name p span{
     text-transform: none;
 }
 .testimonial .box-container .box p{
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #333;
     font-weight: 400;
     line-height: 1.8;
-}
-
-/*--------------- Blog Section ---------------*/ 
-
-.blogs .blogs-slider{
-    padding-bottom: 4rem;
-}
-
-.blogs .blogs-slider .box{
-    position: relative;
-    overflow: hidden;
-    margin: 1rem 0;
-    background: #fafafa;
-    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .3);
-}
-
-.blogs .blogs-slider .box .image{
-    height: 40rem;
-    width: 100%;
-    overflow: hidden;
-}
-.blogs .blogs-slider .box .image img{
-     height: 100%;
-     width: 100%;
-     object-fit: cover;
-}
-
-.blogs .blogs-slider .box:hover .image img{
-    transform: scale(1.2);
-}
-
-.blogs .blogs-slider .box .content{
-    padding: 2rem;
-    padding-bottom: 1rem;
-}
-.blogs .blogs-slider .box .content h3{
-    font-size: 2rem;
-    color: var(--black);
-    font-weight: bold;
-    padding-bottom: 1rem;
-}
-
-.blogs .blogs-slider .box .content span{
-    font-size: 1.3rem;
-    color: #808080;
-}
-.blogs .blogs-slider .box .content span i{
-    margin-right: .5rem;
-    color: var(--main-color);
-}
-.blogs .blogs-slider .box .content p{
-    padding-top: 1rem;
-    color: #808080;
-    font-size: 1.5rem;
-    line-height: 1.8;
-}
-.blogs .blogs-slider .box .button{
-    text-align: center;
-    padding-bottom: 2rem;
-}
-.blogs .blogs-slider .box .button .btn{
-    background: var(--main-color);
-    color: #fff;
-}
-
-/*--------------- Blog Section ---------------*/ 
+} */
 
 .footer{
     background: #222;
@@ -582,6 +504,8 @@ input[type=text], input[type=password] {
     column-rule: #fff;
     font-weight: 600;
     padding-bottom: 1rem;
+    color: #fff;
+    text-transform: none;
 }
 .footer .box-container .box .text{
     color: #eee;
@@ -589,6 +513,7 @@ input[type=text], input[type=password] {
     font-weight: normal;
     line-height: 1.8;
     padding-bottom: 1rem;
+    text-transform: none;
 }
 .footer .box-container .box .icon{
     padding: 1rem 0;
@@ -604,6 +529,7 @@ input[type=text], input[type=password] {
     border-radius: 50%;
     margin: 0 .5rem;
     color:  #fff;
+    border: .2rem solid #222;
 }
 .footer .box-container .box .icon a i:hover{
     color: var(--main-color);
@@ -662,6 +588,9 @@ input[type=text], input[type=password] {
     }
     .modal{
         padding-top: 16rem;
+    }
+    .btn-slider{
+        display: block;
     }
 }
 
